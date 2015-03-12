@@ -98,10 +98,10 @@ input.reg {
 }
 
 #jointitle {
-    color: #FFF;
+    color: #000;
     font-size: 110px;   
     font-family: Bebas;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
      display: inline-block;
 
 }
