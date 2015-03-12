@@ -1,0 +1,60 @@
+body {
+     overflow: hidden;
+}
+/*Landing Page stuff*/
+#loginButton {
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #000;
+    
+    font-size: 50px;
+    font-family: BlackBoard;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin: 0 auto;   
+}
+
+body.landing {
+     background-size: 100% 100vh;
+     background-image: url(main-back.png);  
+     background-repeat: no-repeat;
+     z-index: -1;
+     overflow: hidden;
+}
+
+.logo {
+    margin: 0 auto;
+    height: 364px;
+    width: 800px;
+    background-image: url(SteefishBlack.png);
+    background-size: 100% 100%;
+    overflow: hidden;
+    border-radius: 10px;
+        
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: /*whatever width you want*/;
+    overflow: hidden;
+}
+@font-face {
+    font-family: 'BlackBaord'; /*a name to be used later*/
+    src: url(Blackboard.ttf); /*URL to font*/
+}

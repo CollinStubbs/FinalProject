@@ -1,0 +1,17 @@
+{
+  "name": "FinalProject",
+  "version": "1.0.0",
+  "description": "CSCI 4160U",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "jsonfile": "^2.0.0",
+    "mkdirp": "^0.5.0",
+    "multiparty": "^4.1.1"
+  },
+  "author": "Collin Stubbs",
+  "license": "ISC"
+}
