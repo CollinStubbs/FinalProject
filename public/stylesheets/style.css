@@ -4,16 +4,38 @@ body {
 /*Landing Page stuff*/
 #loginButton {
     border: 2px solid black;
-    border-radius: 10px;
-    color: #000;
+    width: 200px;
+    
+    color: #111;
+    background-color: #663;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     
     font-size: 50px;
-    font-family: BlackBoard;
-    margin-bottom: 20px;
+    font-family: Bebas, BlackBoard;
+    
 }
 
 .buttons {
-    margin: 0 auto;   
+    padding-bottom: 28px;
+    text-align: center;
+    width: 100vh;
+    margin: 0 auto;  
+    margin-top: 60px;
+}
+
+input {
+    text-align: center;
+    border-radius: 4px;   
+    height: 30px;
+    width: 230px;
+    border: 2px solid black;
+}
+.inputs {
+    
+    margin-top: 20px;
+    text-align: center;
 }
 
 body.landing {
@@ -37,7 +59,7 @@ body.landing {
 .outer {
     display: table;
     position: absolute;
-    height: 80%;
+    height: 90%;
     width: 100%;
     overflow: hidden;
 }
@@ -57,4 +79,8 @@ body.landing {
 @font-face {
     font-family: 'BlackBaord'; /*a name to be used later*/
     src: url(Blackboard.ttf); /*URL to font*/
+}
+@font-face {
+    font-family: 'Bebas'; /*a name to be used later*/
+    src: url(BebasNeue.otf); /*URL to font*/
 }
