@@ -38,7 +38,7 @@ input {
     text-align: center;
 }
 
-body.landing {
+body.landing, body.register {
      background-size: 100% 100vh;
      background-image: url(main-back.png);  
      background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body.landing {
 .outer {
     display: table;
     position: absolute;
-    height: 90%;
+    height: 110%;
     width: 100%;
     overflow: hidden;
 }
@@ -76,6 +76,50 @@ body.landing {
     width: /*whatever width you want*/;
     overflow: hidden;
 }
+
+/*Join/Register page*/
+.regIn {
+    width: 30%;
+    height: 60%;
+    background: rgba(0,0,0,0.5); 
+    
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+input.reg {
+    margin-bottom: 15px;
+    width: 350px;
+    height: 50px;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+#jointitle {
+    color: #FFF;
+    font-size: 110px;   
+    font-family: Bebas;
+    margin-bottom: 20px;
+     display: inline-block;
+
+}
+.regTitle{
+ padding-top: 40px;   
+ display: inline-block;
+}
+
+.arrow {
+   content: url(arrow.png);
+     display: inline-block;
+    margin-right: 30px;
+}
+
+#outerup {
+    height: 90%;   
+}
+/*Fonts*/
 @font-face {
     font-family: 'BlackBaord'; /*a name to be used later*/
     src: url(Blackboard.ttf); /*URL to font*/
