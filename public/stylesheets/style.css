@@ -106,18 +106,41 @@ input.reg {
 
 }
 .regTitle{
- padding-top: 40px;   
- display: inline-block;
+     padding-top: 40px;   
+     display: inline-block;
 }
 
 .arrow {
-   content: url(arrow.png);
+     content: url(arrow.png);
      display: inline-block;
-    margin-right: 30px;
-}
+     margin-right: 30px;
+}  
 
 #outerup {
     height: 90%;   
+}
+
+/*Home Page*/
+.home {
+    background-color: #EBE0D6;
+} 
+
+.navimg {
+    content: url(SteefishBlack.png);   
+}
+
+.redWest {
+    background-color: #000;   
+}
+
+.navgroup {
+    margin-top: 20px;
+    margin-right: 40px;
+    float: right;
+    
+    color: #FFF;
+    font-family: Bebas;
+    font-size: 35px;
 }
 /*Fonts*/
 @font-face {

@@ -38,7 +38,7 @@ if ('development' == app.get('env')) {
 }
 
 function authenticate(name, pass, fn) {
-	var file = '../Assignment1/node_modules/Users.json'
+	var file = '../FinalProject/node_modules/Users.json'
 	jf.readFile(file, function(err, obj) 
 	{
 		var users = obj;
@@ -52,7 +52,16 @@ function authenticate(name, pass, fn) {
 		return fn(new Error("Invalid Password"));
 	})
 }
-
+String.prototype.hashCode = function() {
+  var hash = 0, i, chr, len;
+  if (this.length == 0) return hash;
+  for (i = 0, len = this.length; i < len; i++) {
+    chr   = this.charCodeAt(i);
+    hash  = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
 
 function restrict(req, res, next) {
   if (req.session.user) {
@@ -89,7 +98,10 @@ app.get('/join', function(req, res){
   res.render('join');
   
 });
-
+app.get('/home', function(req, res){
+  res.render('home');
+  
+});
 app.get('/upload', restrict, function(req, res){
   res.render('upload');
 });
@@ -154,38 +166,38 @@ app.post('/login', function(req, res){
           + ' You may now access <a href="/restricted">/restricted</a>.';
         currentUser =  req.body.username;
 
-        res.redirect('/gallery');
+        res.redirect('/home');
       });
     } else {
       req.session.error = 'Authentication failed, please check your '
         + ' username and password.'
         + ' (use "tj" and "foobar")';
-      res.redirect('login');
+      res.redirect('/home');
     }
   });
 });
 
 
 app.post('/join', function(req, res){
-  authenticate(req.body.username, req.body.password, function(err, user){
+  authenticate(req.body.username.hashCode(), req.body.password.hashCode(), function(err, user){
     if (user) {
 		console.log('User already exists');
+       
 	    res.redirect('/join');
     } else {
-		var file = '../Assignment1/node_modules/Users.json'
+		var file = '../FinalProject/node_modules/Users.json'
 		jf.readFile(file, function(err, obj) 
 		{
 			var users = obj;
-			var key = req.body.username;
-			var val = req.body.password;
+			var key = req.body.username.hashCode();
+			var val = req.body.password.hashCode();
 			if(key.length!=0 && val.length!=0)
 			{
-				users[key] = req.body.password;
+				users[key] = req.body.password.hashCode();
 				jf.writeFileSync(file, users);
-				mkdirp('users/' + key, function(err) {
-
-});
-				res.redirect('/login');
+				mkdirp('users/' + key, function(err) {});
+                currentUser =  req.body.username;
+				res.redirect('/home');
 			}
 			else
 			{
