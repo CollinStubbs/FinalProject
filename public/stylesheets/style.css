@@ -142,6 +142,27 @@ input.reg {
     font-family: Bebas;
     font-size: 35px;
 }
+
+.arrowAnimate {
+    content: url(arrow.png);
+    margin-top: 15vh;
+    margin-left: 3vh;
+    height:60vh;
+    width:auto;
+}
+
+#voteAd {
+    background-color: #9F1D20;
+    margin-top: 20px;
+    margin-left: 100px;
+    
+    
+    color: #FFF;
+    font-family: BlackBaord;
+    font-size: 50px;
+    padding: 20px;
+}
+
 /*Fonts*/
 @font-face {
     font-family: 'BlackBaord'; /*a name to be used later*/
