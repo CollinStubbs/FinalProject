@@ -145,10 +145,10 @@ input.reg {
 
 .arrowAnimate {
     content: url(arrow.png);
-    margin-top: 15vh;
-    margin-left: 3vh;
-    height:60vh;
-    width:auto;
+    margin-top: 7%;
+    margin-left: 1%;;
+    height:auto;
+    width:40%;
 }
 
 #voteAd {
