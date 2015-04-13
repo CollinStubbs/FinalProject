@@ -122,7 +122,7 @@ input.reg {
 
 /*Home Page*/
 .home {
-    background-color: #EBE0D6;
+    background-image: url(dark_embroidery.png);
 } 
 
 .navimg {
@@ -130,6 +130,7 @@ input.reg {
 }
 
 .redWest {
+    margin-top: 1%;
     background-color: #000;   
 }
 
@@ -140,28 +141,69 @@ input.reg {
     
     color: #FFF;
     font-family: Bebas;
-    font-size: 35px;
+    font-size: 30px;
 }
 
-.arrowAnimate {
-    content: url(arrow.png);
-    margin-top: 7%;
-    margin-left: 1%;;
+#tableHome {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+border-collapse: separate;
+border-spacing: 15px;}
+#arrowID{
     height:auto;
-    width:40%;
+    width: 60%;
+    margin-right: 30px;
 }
-
+.arrowAnimate {
+    content: url(homesuit.png);
+    
+    height: auto;
+    width: 100%;
+}
+#topRight{
+ height: 100%;   
+}
 #voteAd {
     background-color: #9F1D20;
     margin-top: 20px;
     margin-left: 100px;
-    
     
     color: #FFF;
     font-family: BlackBaord;
     font-size: 50px;
     padding: 20px;
 }
+
+#athletics {
+    text-decoration: none;
+    font-family: Keepcalm;
+    font-size: 30px;
+    color: #000;
+}
+#graphicsdiv {
+    margin-top: 20px;   
+}
+#graphics {
+    text-decoration: none;
+    font-family: Keepcalm;
+    font-size: 30px;
+    color: #000;
+}
+
+.athletics {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 900%;
+    background-color: #ED1B24;
+    height: 900%;
+    width: 100%;
+}
+.athletics:hover {
+    text-decoration: underline;   
+}
+
+
 
 /*Fonts*/
 @font-face {
@@ -171,4 +213,8 @@ input.reg {
 @font-face {
     font-family: 'Bebas'; /*a name to be used later*/
     src: url(BebasNeue.otf); /*URL to font*/
+}
+@font-face {
+    font-family: 'Keepcalm'; /*a name to be used later*/
+    src: url(KeepCalm-Medium.ttf); /*URL to font*/
 }
