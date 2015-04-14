@@ -98,6 +98,10 @@ app.get('/join', function(req, res){
   res.render('join');
   
 });
+app.get('/about', function(req, res){
+  res.render('about');
+  
+});
 app.get('/home', function(req, res){
   res.render('home');
   
