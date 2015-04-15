@@ -1,6 +1,9 @@
 body {
-     overflow: hidden;
+     overflow: auto;
+    height: 100%;
 }
+html, body {height:100%;}
+
 /*Landing Page stuff*/
 #loginButton {
     border: 2px solid black;
@@ -130,9 +133,16 @@ input.reg {
     content: url(SteefishBlack.png);   
 }
 
+
 .redWest {
     margin-top: 1%;
     background-color: #000;   
+    
+}
+
+.navgroup a {
+    text-decoration: none;   
+    color:white;
 }
 
 .navgroup {
@@ -149,8 +159,9 @@ input.reg {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-border-collapse: separate;
-border-spacing: 15px;}
+    border-collapse: separate;
+    border-spacing: 15px;
+}
 #arrowID{
     height:auto;
     width: 60%;
@@ -207,9 +218,6 @@ border-spacing: 15px;}
     text-decoration: underline;   
 }
 
-#social{
-   
-}
 .social {
     margin-top: 40px;
     text-align: center;
@@ -269,8 +277,103 @@ border-spacing: 15px;}
 
 
 
+/*ABOUT PAGE*/
+.aboutContainer{
+    background-color: #222;
+    border-radius: 20px;
+    border: 3px solid black;
+    height: 80%;
+    margin: 20px 35px;
+}
+.fullFlex{
+    content: url(FullFlexExpress.jpg);   
+    height: 40%;
+    width: auto;
+    padding-left: 20px;
+}
+#aboutTitle{
+    font-family:  Bebas;
+    font-size: 42px;
+    text-decoration: underline;
+    color: white;
+    width:100%;
+    text-align: center;
+    font-weight: 100;
+}
+.contentText{
+    font-family: Bebas;
+    font-size: 20px;
+    color: white;
+    float: right;
+    font-weight: 100;
+    line-height: normal;
+    padding-left: 15px;
+}
+/*Collections*/
+.colContainer{
+    background-color: #222;
+    border-radius: 20px;
+    border: 3px solid black;
+    height: auto;
+    margin: 20px 35px;
+}
+.ath{
+ color: white;
+    font-size: 28px;
+    font-family:Keepcalm;
+    padding-left: 10px;
+}
+#athTab{
+     margin: 0 auto;
+    width: 80%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 25px;
+}
+.bigbad{
+ content: url(BigBad.png);
+  width:100%;
+}
+.live{
+ content: url(LiveLarge.png);
+      width:100%;
 
+}
+.inverse{
+ content: url(inverseLogo.png);
+      width:100%;
 
+}
+.gold{
+ content: url(Gold.png);
+      width:100%;
+
+}
+.where{
+ content: url(TheWomen-01.png);
+      width:100%;
+
+}
+.arc{
+ content: url(ArcadianCanadian.png);
+      width:100%;
+
+}
+.go{
+ content: url(GoWild.png);
+      width:100%;
+
+}
+.great{
+ content: url(GreatRedWest.png);
+      width:100%;
+
+}
+.steel{
+ content: url(SteelFish2.png);
+      width:100%;
+
+}
 
 /*Fonts*/
 @font-face {
