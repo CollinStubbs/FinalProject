@@ -12,14 +12,20 @@
             <div class="inner">
                 <div class="logo">
                 </div>
-                <div class="inputs">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="buttons">
-                    <a id="loginButton" href="/login" >Login</a>
-                    <a id="loginButton" href="/join">Register</a>
-                </div>
+                <FORM method="post" action="/login" >
+                     <div class="inputs">
+                        <input type="text" name="username" placeholder="Username">
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+
+
+
+                    <div class="buttons">
+                       
+                    <input id="loginButton" type="submit" value="Login" />
+                        <a id="loginButton" href="/join">Register</a>
+                    </div>
+                </FORM>
             </div>
         </div>
     </div>

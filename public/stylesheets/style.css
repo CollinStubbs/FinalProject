@@ -8,7 +8,7 @@ html, body {height:100%;}
 #loginButton {
     border: 2px solid black;
     width: 200px;
-    
+    height:auto;
     color: #111;
     background-color: #663;
     padding: 20px;

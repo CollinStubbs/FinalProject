@@ -8,7 +8,6 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
-//var users = require('Users.json');
 var fs = require('fs');
 var jf = require('jsonfile')
 var util = require('util');
@@ -39,6 +38,7 @@ if ('development' == app.get('env')) {
 
 function authenticate(name, pass, fn) {
 	var file = '../FinalProject/node_modules/Users.json'
+    console.log("WE MADE IT");
 	jf.readFile(file, function(err, obj) 
 	{
 		var users = obj;
@@ -118,54 +118,10 @@ app.get('/upload', restrict, function(req, res){
   res.render('upload');
 });
 
-app.get('/gallery', restrict, function(req, res){
-  var path ="./users/" + currentUser + '/';
-  var files = fs.readdirSync(path);
-  for (var i in files) {
-	  console.log('File: ' + files[i]);
-   }
-
-  res.render('gallery', {
-  	dest : currentUser, 
-  	images: files });
-});
-
-
-
-app.post('/upload', function(req, res){
-	var multiparty = require("multiparty");
-	var form = new multiparty.Form();
-
-	form.parse(req, function(err, fields, files){
- 		var img = files.userPhoto[0];
- 		var imageName = files.userPhoto[0].originalFilename;
- 		var n = imageName.lastIndexOf(".");
- 		var f = imageName.slice(n+1, imageName.length);
- 		var acceptedFiles= ["jpg", "tif", "png", "jpeg", "gif", "bmp" ];
- 		var found = false;
- 		for (var i=0; i < acceptedFiles.length; i++){
- 			if (f == acceptedFiles[i])
- 				found = true;
- 		}
- 		if (found){
-	 		fs.readFile(img.path, function(err, data){
-	 			var path ="./users/" + currentUser + '/' + img.originalFilename;
-	 			fs.writeFile(path,data, function(error){
-	 				if (error) console.log(error);
-	 				res.redirect('/gallery');
-	 			});
-	 		});
- 		}
- 		else
- 		{
- 			res.send("You can only upload Image file");
- 		}
- });
-});
-
 app.post('/login', function(req, res){
-  authenticate(req.body.username, req.body.password, function(err, user){
+  authenticate(req.body.username.hashCode(), req.body.password.hashCode(), function(err, user){
     if (user) {
+        console.log("USER IS TRUE");
       // Regenerate session when signing in
       // to prevent fixation 
       req.session.regenerate(function(){
@@ -181,10 +137,10 @@ app.post('/login', function(req, res){
         res.redirect('/home');
       });
     } else {
+        console.log("USER IS FALSE");
       req.session.error = 'Authentication failed, please check your '
-        + ' username and password.'
-        + ' (use "tj" and "foobar")';
-      res.redirect('/home');
+        + ' username and password.';
+      res.redirect('/login');
     }
   });
 });
@@ -207,7 +163,6 @@ app.post('/join', function(req, res){
 			{
 				users[key] = req.body.password.hashCode();
 				jf.writeFileSync(file, users);
-				mkdirp('users/' + key, function(err) {});
                 currentUser =  req.body.username;
 				res.redirect('/home');
 			}
@@ -215,7 +170,8 @@ app.post('/join', function(req, res){
 			{
 				res.redirect('/join');
 			}
-		})
+		});
+        
     }
   });
 });
