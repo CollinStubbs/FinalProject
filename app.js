@@ -99,24 +99,38 @@ app.get('/join', function(req, res){
   
 });
 app.get('/about', function(req, res){
-  res.render('about');
+     if(currentUser==""){
+        res.render('login');
+    }else{
+        res.render('about');
+    }
   
 });
 app.get('/collections', function(req, res){
-  res.render('collections');
+    if(currentUser==""){
+        res.render('login');
+    }else{
+        res.render('collections');
+    }
   
 });
 app.get('/contact', function(req, res){
-  res.render('contact');
+     if(currentUser==""){
+        res.render('login');
+    }else{
+        res.render('contact');
+    }
   
 });
 app.get('/home', function(req, res){
-  res.render('home');
+    if(currentUser==""){
+        res.render('login');
+    }else{
+        res.render('home');
+    }
   
 });
-app.get('/upload', restrict, function(req, res){
-  res.render('upload');
-});
+
 
 app.post('/login', function(req, res){
   authenticate(req.body.username.hashCode(), req.body.password.hashCode(), function(err, user){
