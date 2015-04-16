@@ -106,6 +106,10 @@ app.get('/collections', function(req, res){
   res.render('collections');
   
 });
+app.get('/contact', function(req, res){
+  res.render('contact');
+  
+});
 app.get('/home', function(req, res){
   res.render('home');
   

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html height="100%">
+<head>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+</head>
+    <body class="home">
+        <nav class="redWest">
+            <a href="/home"><img class="navimg" alt="Arrow" width="165.6" height="76.95"></a>
+            <div class="navgroup">
+                <a href="/collections">Collections &nbsp;</a>
+                <a href="/about">About &nbsp;</a>
+                <a href="/contact">Contact &nbsp;</a>
+                <a>Logout</a>
+            </div>
+        </nav>
+       
+        <div class="aboutContainer">
+            <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                <div id="form_container">
+                    <div class="row">
+                        <label for="name">Name:</label><br />
+                        <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+                    </div>
+                    <div class="row">
+                        <label for="email">Email:</label><br />
+                        <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+                    </div>
+                    <div class="row">
+                        <label for="message">Message:</label><br />
+                        <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+                    </div>
+                    <input id="submit_button" type="submit" value="Send email" />
+                </div>
+            </form>				
+        </div>      
+    </body>
+</html>
